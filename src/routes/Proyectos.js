@@ -1,5 +1,7 @@
+import Footer from "../components/footer/Footer";
 import Hero from "../components/hero/Hero";
 import NavBar from "../components/navbar/navbar";
+import Recent from "../components/recent/Recent";
 
 export default function Proyectos(){
     return(
@@ -11,6 +13,8 @@ export default function Proyectos(){
                 title='Proyectos'
                 btnClass='hide'
             />
+            <Recent/>
+            <Footer/>
         </>
     )
 }

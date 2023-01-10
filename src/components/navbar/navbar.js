@@ -20,19 +20,18 @@ function NavBar(){
             <i className={ clicked? 'fas fa-times':'fas fa-bars'}/>    
         </div>
 
-        <ul className={clicked? 'nav-menu active':'nav-menu'}>
+        <ul className={clicked? 'nav-menu-active':'nav-menu'}>
             {MenuItems.map( (item,index) => {
                 return(
                         <li key={index}> 
                             <Link className={item.cName} to={item.url}>
-                                <i className={item.icon}></i>  {item.title}
+                                <i className={item.icon}/>       {item.title}
                             </Link> 
+                            
                         </li>
                     )
             })}
-            <button>
-                Hace tu donacion
-            </button>
+            
         </ul>
 
     </div>

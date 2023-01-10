@@ -1,3 +1,5 @@
+import ContactForm from "../components/contactForm/ContactForm";
+import Footer from "../components/footer/Footer";
 import Hero from "../components/hero/Hero";
 import NavBar from "../components/navbar/navbar";
 
@@ -11,6 +13,8 @@ export default function Contacto(){
                 title='Contacto'
                 btnClass='hide'
             />
+            <ContactForm/>
+            <Footer/>
         </>
     )
 }
