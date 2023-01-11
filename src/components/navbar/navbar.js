@@ -25,9 +25,8 @@ function NavBar(){
                 return(
                         <li key={index}> 
                             <Link className={item.cName} to={item.url}>
-                                <i className={item.icon}/>       {item.title}
+                                <i className={item.icon}/>{item.title}
                             </Link> 
-                            
                         </li>
                     )
             })}
