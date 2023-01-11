@@ -1,4 +1,5 @@
 .recent{
+    text-align: center;
     margin: 4rem 6rem;
     color: black;
 
@@ -20,6 +21,9 @@
         cursor: pointer;
         padding: 1rem .8rem;
 
+       /*  &:hover{
+            transform: scale(0.3); /* Zoom en la imagen */ /* No queda muy bien, podria hacer el hover en la card y no solo en la imagen 
+        } */
         .image{
             height: 200px;
             overflow: hidden;
@@ -31,9 +35,6 @@
                 transition: 0.3s ease-in-out;
                 border-radius: 7px;
 
-                &:hover{
-                    transform: scale(1.3); /* Zoom en la imagen */ /* No queda muy bien, podria hacer el hover en la card y no solo en la imagen */
-                }
             }
         }
     }

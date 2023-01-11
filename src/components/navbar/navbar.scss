@@ -1,5 +1,6 @@
 .navbar{
     display: flex;
+    background-color: aliceblue;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
@@ -7,9 +8,14 @@
     width: 95%;
     height: 80px;
     border-radius: 13px;
-
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
     h1{
-        color: blue;
+        color: black;
         font-size: 2rem;
         cursor: pointer;
     }
@@ -24,7 +30,7 @@
 
     .nav-links{
         text-decoration: none;
-        color: blue;
+        color: black;
         font-size: 1.2rem;
         font-weight: 600;
         padding: .7rem 1rem;
@@ -41,3 +47,107 @@
         }
     }
 }; 
+
+.nav-links-mobile-button{
+    display: none;
+}
+
+button{
+    padding: .5ren 1rem;
+    white-space: nowrap;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out ;
+
+    &:hover{
+        background-color: violet;
+        color:white;
+    }
+}
+
+.menu-icons{
+    display: none;
+}
+@media (max-width:1100px) {
+    button{
+        display: none;
+    }
+    .navbar{
+        h1{
+            font-size: 1.4rem;
+            
+        }
+    }
+}
+@media (max-width:850px){
+    .navbar{
+        z-index: 99;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: blue;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        transition: .3s ease-in-out;
+        border-radius: 13px;
+    }
+
+    .nav-menu.active{ /*  Necesita conservar las props de nav-menu y le agrego la clase active */
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: .3s ease-in-out;
+    }
+
+    .nav-links{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+
+        &:hover{
+            background-color: orange;
+            transition: none;
+        }
+    }
+
+    /* button{
+        display: none;
+    } */
+
+    .nav-links-mobile-button{
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        background-color: orange;
+        color: blue;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;/* Separacion entre letras */
+    }
+
+    .menu-icons{
+        display: block;
+        cursor: pointer;
+
+        i{
+            font-size: 1.2rem;
+            color: black;
+        }
+    }
+}

@@ -26,7 +26,7 @@ export const MenuItems = [
     {
         title : 'Hace tu donacion',
         url : '/donacion',
-        cName : 'nav-links mobile-button'
+        cName : 'nav-links-mobile-button'
     },
 
 ]
